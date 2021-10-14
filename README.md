@@ -1,4 +1,4 @@
-# Media-Queries-
+# **Media-Queries-**
 # Emily Griffith Technical College
 ## August 2020
 
