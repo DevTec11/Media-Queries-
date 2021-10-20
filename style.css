@@ -27,7 +27,24 @@ html {
     min-width: 100%; 
   }
 /* filter (effect) params HERE 👇🏾*/ 
- 
+ #one {
+   filter:blur(21px);
+ }
+ #two {
+   filter:brightness(200%);
+ }
+ #three {
+   filter:saturate(2.5);
+ }
+ #four {
+   filter: invert(0.9);
+ }
+ #five {
+   filter: contrast(250%);
+ }
+ #six {
+   filter:drop-shadow(blue 0px 10px 25px);
+ }
   
   figure {
     border: 5px black solid; 
@@ -44,5 +61,108 @@ html {
   }
   
 /* Look up a media query property */
+/* Breakpoint ONE (Use min and max width's to display differently at different px */
+@media screen and (max-width: 740px) and (min-width: 320px) {
+  body {
+    background-color: paleturquoise;
+    margin: 25px 6%;
+  }
+
+  figure {
+    float: left;
+    width: 45%;
+    margin-right: 4.5%;
+  }
+}
+/* Breakpoint TWO */
+@media screen and (max-width: 1039px) and (min-width: 741px) {
+  body {
+    background-color: slateblue;
+    margin: 25px 8%;
+  }
+  figure {
+    float: left;
+    width: 45%;
+    margin-right: 4.5%;
+  }
+}
+/* Breakpoint THREE*/
+@media screen and (min-width: 1040px) and (max-width: 1800px) {
+  body {
+    background-color: burlywood;
+    margin: 25px 10%;
+  }
+}
 
 
+
+
+
+
+
+.nav {
+  text-align: left;
+  height: 50px;
+  line-height: 40px;
+}
+.menu {
+  margin: 0 30px 0 0;
+  display: inline;
+}
+.menu a {
+  text-decoration: none;
+  color: orange;
+  line-height: 50px;
+  margin-left: 15px;
+}
+label {
+  font-size: 25px;
+  line-height: 50px;
+  display: none;
+  margin: 0 40px 0 0;
+}
+#toggle {
+  display: none;
+}
+@media screen and (max-width:500px) {
+  label {
+    display: block;
+  }
+  .menu {
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    color: fuchsia;
+    display: none;
+  }
+  .menu a {
+    display: block;
+    margin: 0 10px;
+    font-size: 25px;
+  }
+  #toggle:checked + .menu {
+    display: block;
+
+  }
+}
+@media screen and (max-width: 740px) and (min-width: 481px) {
+  label {
+    font-size: 30px;
+    line-height: 50px;
+    display: none;
+  }
+  .menu {
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+  }
+  .menu a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: orchid;
+    line-height: 50px;
+  }
+  #toggle:checked + .menu {
+    display: inline;
+  }
+}
